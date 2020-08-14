@@ -1,0 +1,4 @@
+server.name: kibana
+server.host: "0"
+elasticsearch.hosts: http://lb.elasticsearch7.common.qa.blzlocal.com.br:9200
+logging.events.log: ['warning', 'error', 'fatal', 'info', 'reporting']
