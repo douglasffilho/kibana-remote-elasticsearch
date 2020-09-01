@@ -12,9 +12,11 @@ docker-compose up -d
 cd /home/douglasffilho/workspace/BNW/kibanas/kibana-qa/
 docker-compose up -d
 
-echo 'Pleases wait...'
-for i in 0..40; do
-    sleep(1000);
+echo '\n'
+for i in $(seq 40 -1 0); do
+    echo -n "\rPlease wait for $i s"
+    sleep 1s
 done
 
-echo 'you can use kibana locally ihuuuuu!'
+echo -n "\rAwwwwyeeehh! Now you can use kibana locally."
+echo ''
