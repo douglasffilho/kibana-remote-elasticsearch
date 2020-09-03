@@ -6,15 +6,17 @@ for container in $containers; do
     docker container rm "${container}"
 done
 
-cd /home/douglasffilho/workspace/BNW/kibanas/kibana-prod/
+local_dir=$(dirname $0)
+
+cd $local_dir/kibana-prod/
 docker-compose up -d
 
-cd /home/douglasffilho/workspace/BNW/kibanas/kibana-qa/
+cd $local_dir/kibana-qa/
 docker-compose up -d
 
 echo '\n'
 for i in $(seq 40 -1 0); do
-    echo -n "\rPlease wait for $i s"
+    echo -n "\rPlease wait for $i s\t"
     sleep 1s
 done
 
