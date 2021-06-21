@@ -6,7 +6,7 @@ for container in $containers; do
     docker container rm "${container}"
 done
 
-local_dir=$(dirname $0)
+local_dir="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 cd $local_dir/kibana-prod/
 docker-compose down -v
