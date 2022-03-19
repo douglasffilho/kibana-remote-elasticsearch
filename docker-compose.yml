@@ -1,15 +1,15 @@
 version: '3'
 services:
   kibana-prd:
-    image: docker.elastic.co/kibana/kibana:7.7.1
+    image: docker.elastic.co/kibana/kibana:7.7.1-local
     ports:
       - 5601:5601
     volumes:
-      - ./PRDConfig:/usr/share/kibana/config/:ro
+      - ./config/local/prd:/usr/share/kibana/config/:ro
 
   kibana-hml:
-    image: docker.elastic.co/kibana/kibana:7.7.1
+    image: docker.elastic.co/kibana/kibana:7.7.1-local
     ports:
       - 5602:5601
     volumes:
-      - ./HMLConfig:/usr/share/kibana/config/:ro
+      - ./config/local/hml:/usr/share/kibana/config/:ro

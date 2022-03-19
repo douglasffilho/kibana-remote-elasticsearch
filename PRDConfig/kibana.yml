@@ -1,4 +1,0 @@
-server.name: kibana
-server.host: "0"
-elasticsearch.hosts: http://prod.elasticsearch-cluster:9200
-logging.events.log: ['warning', 'error', 'fatal', 'info', 'reporting']

@@ -6,10 +6,15 @@ Connects Kibana to a remote elasticsearch cluster using docker-compose
 - Docker Compose
 - Good connection with elasticsearch cluster
 
-# Run:
-
-You can run:
+## Build and Run
 ```bash
+docker build -t docker.elastic.co/kibana/kibana:7.7.1-local .
+docker-compose up -d
+```
+
+## Build and Run ARM64 arch
+```bash
+docker build --platform linux/arm64 -t docker.elastic.co/kibana/kibana:7.7.1-local .
 docker-compose up -d
 ```
 
