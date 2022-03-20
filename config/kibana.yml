@@ -1,3 +1,9 @@
 server.name: kibana
 server.host: "0.0.0.0"
-elasticsearch.hosts: ["http://prod.elasticsearch-cluster:9200"]
+elasticsearch.hosts: ["https://elasticsearch-cluster.com"]
+elasticsearch.username: "username"
+elasticsearch.password: "password"
+elasticsearch.ssl.verificationMode: full # full|none
+elasticsearch.ssl.certificate: /path/to/your/client.crt
+elasticsearch.ssl.key: /path/to/your/client.key
+elasticsearch.ssl.certificateAuthorities: [ "/path/to/your/CA.pem" ]
