@@ -8,13 +8,13 @@ Connects Kibana to a remote elasticsearch cluster using docker-compose
 
 ## Build and Run
 ```bash
-docker build -t docker.elastic.co/kibana/kibana:7.7.1-local .
+docker build -t docker.elastic.co/kibana/kibana:7.17.1-local .
 docker-compose up -d
 ```
 
 ## Build and Run ARM64 arch
 ```bash
-docker build --platform linux/arm64 -t docker.elastic.co/kibana/kibana:7.7.1-local .
+docker build --platform linux/arm64 -t docker.elastic.co/kibana/kibana:7.17.1-local .
 docker-compose up -d
 ```
 
